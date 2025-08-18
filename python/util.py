@@ -9,8 +9,10 @@ def get_spin(x, i):
 def sum_bits(x):
     return bin(x).count('1')
 
-def shift(x, N):
-    return ((x << 1) | (x >> (N - 1))) & ((1 << N) - 1)
+def shift(x, N, k = 1):
+    # k = number of steps to shift by
+
+    return ((x << k) | (x >> (N - k))) & ((1 << N) - 1)
 
 def reflect(s, N):
     r = 0
@@ -18,9 +20,6 @@ def reflect(s, N):
         if (s >> i) & 1:
             r |= 1 << (N - 1 - i)
     return r
-
-
-    return (head << (N - 2)) | tail
 
 # ============= prining states =============
 def int_to_bin(x, N):
@@ -45,3 +44,11 @@ def next_state(x):
     r = x + c
     x = (((r ^ x) >> 2) // c) | r
     return x
+
+
+# =========== example usage ============
+if __name__ == "__main__":
+    # Example usage
+    x = 0b1101001
+    print(bin(reflect(x, 7)))
+    print(bin(shift(x, 7)))

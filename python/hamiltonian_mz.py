@@ -41,7 +41,7 @@ def hamiltonian_mz(N, mz):
     return H
 
 if __name__ == "__main__":
-    N = 4
+    N = 10
     mz = 0 # magnetisation
 
     print("N:", N, "mz:", mz)

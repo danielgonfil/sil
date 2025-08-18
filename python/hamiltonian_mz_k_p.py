@@ -1,197 +1,187 @@
 import numpy as np
 np.set_printoptions(precision=3)
 
-from util import flip, get_spin, list_to_bin, findstate, shift, reflect
+from util import flip, get_spin, list_to_bin, findstate, shift, reflect, int_to_bin
 from hamiltonian_mz import build_basis_mz
 
-def checkstate_k_p(s, N, k, p):
-    # p = +1, -1
+def checkstate_k_p(s, N, k, p, debug=False):
     t = s
     R = -1
-
-    # check translation periodicity and minimality
-    for i in range(N):
-        if t < s:
-            return -1, -1  # not the representative
-        elif t == s:
-            if k % (N // (i + 1)) != 0:
-                return -1, -1  # incompatible with k
-            else:
-                R = i + 1
-                break
-        t = shift(t, N)
-
-    if R == -1:
-        return -1, -1
     
-    # reflect and check again
+    for i in range(1, N+1):
+        t = shift(t, N)
+        if t < s: 
+            if debug: print(f"\tState {int_to_bin(s, N)} has periodicity R={-1} (not min cfg) and reflection index m={-1}")
+            return -1, -1 # if a smaller state is found, s is not the representative, return -1
+        elif t == s: # after i shifts, back to original state
+            if k % (N // i) != 0: 
+                if debug: print(f"\tState {int_to_bin(s, N)} has periodicity R={-1} (not compatible with k) and reflection index m={-1}")
+                return -1, -1 # momentum k INcompatible with periodicity i (R = i the periodicity)
+            else: 
+                R = i # R = i, compatible with periodicity i
+                break # otherwise all periodicities will be N
+    
+    # check reflection
     t = reflect(s, N)
     m = -1
     for i in range(R):
-        if t < s:
-            return -1, -1  # reflected version is smaller
+        if t < s: return -1, -1
         elif t == s:
             m = i  # reflection translation index
-            break
         t = shift(t, N)
     
-
-    return R, m
-
-def build_basis_mz_k_p(N, mz, k, p):
-    # NOTE: this is not the actual basis but rather the list of the representatives of the basis states,
-    # which is all we need to build the Hamiltonian !
+    if debug: print(f"\tState {int_to_bin(s, N)} has periodicity R={R} and reflection index m={m}")
     
+    return R, m # periodicity not compatible with k
+
+def build_basis_mz_k_p(N, mz, k, p, debug=False):
+    # NOTE: this is not the actual basis but rather the list of the representatives of the basis states, 
+    # which is all we need to build the Hamiltonian !
+   
     basis_mz = build_basis_mz(N, mz)
-    basis, R_list, m_list, sigma_list = [], [], [], []
+    if debug: print("Basis Mz:", basis_mz)
+    # basis_mz = list(range(1 << N))
+    basis, R_list, m_list, sigma_list = [], [], [], [] # R is the periodicity of the states
 
-    for s in basis_mz:
-        R, m = checkstate_k_p(s, N, k, p)
-        if R < 0:
-            continue
+    for x in basis_mz:
+        if debug: print(f"Checking state {int_to_bin(x, N)}")
+        R, m = checkstate_k_p(x, N, k, p, debug)
 
-        for sigma in [+1, -1]:
-            if (k == 0 or k == N // 2) and sigma == -1:
+        for sigma in [-1, 1]:
+            if sigma == -1 and (k == 0 or k == N // 2):
                 continue
 
-            if m != -1:
+            if m != -1: # if m = -1, the reflected state cannot be brought back to original state by translation, thus both states are included
                 km = 2 * np.pi * k * m / N
-                if np.isclose(1 + sigma * p * np.cos(km), 0):
-                    continue
-                if sigma == -1 and not np.isclose(1 - sigma * p * np.cos(km), 0):
-                    continue
-            elif m == -1:
-                if np.isclose(1 + sigma * p, 0):
-                    continue
+                cos_km = np.cos(km)
 
-            basis.append(s)
-            R_list.append(sigma * R)
-            m_list.append(m)
-            sigma_list.append(sigma)
+                if np.isclose(1 + sigma * p * cos_km, 0):
+                    if debug: print(f"\tState {int_to_bin(x, N)} is not included for σ={sigma}, 1st condition not satisfied (σ={sigma}, p={p}, cos_km={cos_km}, {1 + sigma * p * cos_km})")
+                    R = -1
+                elif sigma == -1 and not np.isclose(1 - sigma * p * cos_km, 0):
+                    if debug: print(f"\tState {int_to_bin(x, N)} is not included for σ={sigma}, 2nd condition not satisfied (σ={sigma}, p={p}, cos_km={cos_km}, {1 - sigma * p * cos_km})")
+                    R = -1
 
-
+            if R >= 0:
+                if debug: print(f"\t=>Adding state {int_to_bin(x, N)} with periodicity R={R}, reflection index m={m}, and σ={sigma}")
+                basis.append(x)
+                R_list.append(R)
+                sigma_list.append(sigma)
+                m_list.append(m)
+    
     return basis, R_list, m_list, sigma_list
 
-def representative_k_p(s, N):
+def representative_k_p(s, N, k, p):
+    # find the representative of the state s, which is the smallest state that can be obtained by translating
     r = s
-    l = 0
-    q = 0  # 0 = no reflection, 1 = reflection
     t = s
+    l = 0
+    
+    for i in range(1, N):
+        t = shift(t, N)
+        if t < r: 
+            r = t
+            l = i
+    
+    t = reflect(s, N)
+    q = 0
 
     for i in range(1, N):
         t = shift(t, N)
-        if t < r:
+        if t < r: 
             r = t
             l = i
-            q = 0
+            q = 1
 
-    # also check reflection + translation
-    t = reflect(s, N)
-    for i in range(N):
-        if t < r:
-            r = t
-            l = i
-            q = 1 # need to reflect once
-        t = shift(t, N)
-    
-    return r, l, q # representative, number of translations, number of reflections (0 or 1)
+    return r, l, q # representative, number of translations
 
-def helement(a, b, l, q, k, p, Ra, ma, sigma):
-    # equations 151 and 152 from sandvik
-    sigma_a = sigma[a]
-    sigma_b = sigma[b]
+def helement(i, j, l, q, k, p, R_list, m_list, sigma_list, N):
+    k = k * 2 * np.pi / N
 
-    R_a = abs(Ra[a])
-    R_b = abs(Ra[b])
-
-    norm_factor = np.sqrt(R_b / R_a)
     hj = 0.5
-    phase = k * l * 2 * np.pi / N
-    cos_kl = np.cos(phase)
-    sin_kl = np.sin(phase)
 
-    m = ma[b]
-    km = k * m * 2 * np.pi / N
-    cos_km = np.cos(km)
-    sin_km = np.sin(km)
+    sigma_a, sigma_b = sigma_list[i], sigma_list[j]
+    R_a, R_b = R_list[i], R_list[j]
+    m_a, m_b = m_list[i], m_list[j]
 
-    if sigma_a == sigma_b: # 151
-        if q == 0:
-            factor = cos_kl
+    if m_a == -1: N_a_inv = R_a
+    else: N_a_inv = R_a * (1 + sigma_a * p * np.cos(k * m_a)) 
+
+    if m_b == -1: N_b_inv = R_b
+    else: N_b_inv = R_b * (1 + sigma_b * p * np.cos(k * m_b))
+
+    sign_factor = (sigma_a * p) ** q
+    norm_factor = np.sqrt(N_a_inv / N_b_inv)
+
+    if sigma_a == sigma_b:
+        if m_b == -1:
+            other_factor = np.cos(k * l)
         else:
-            kl_m = k * (l - m) * 2 * np.pi / N
-            cos_kl_m = np.cos(kl_m)
-            factor = (cos_kl + sigma_a * p * cos_kl_m) / (1 + sigma_a * cos_km)
-    else: # 152
-        if q == 0:
-            factor = -sigma_a * sin_kl
+            other_factor = (np.cos(k * l) + sigma_a * p * np.cos(k * (l - m_b))) / (1 + sigma_a * p * np.cos(k * m_b))
+
+    else:
+        if m_b == -1:
+            other_factor = - sigma_a * np.sin(k * l)
         else:
-            kl_m = k * (l - m) * 2 * np.pi / N
-            sin_kl_m = np.sin(kl_m)
-            factor = (-sigma_a * sin_kl + p * sin_kl_m) / (1 - sigma_a * cos_km)
+            other_factor = (- sigma_a * np.sin(k * l) + p * np.sin(k * (l - m_b))) / (1 - sigma_a * p * np.cos(k * m_b))
 
-    return hj * sigma_a * norm_factor * factor
+    return hj * sign_factor * norm_factor * other_factor
 
-def hamiltonian_mz_k_p(N, mz, k, p):
-    basis, R_list, m_list, sigma_list = build_basis_mz_k_p(N, mz, k, p)
+def hamiltonian_mz_k_p(N, mz, k, p, debug=False):
+    s, R_list, m_list, sigma_list = build_basis_mz_k_p(N, mz, k, p)
     M = len(basis) # M ≠ 2 ** N
     H = np.zeros((M, M), dtype=complex) # this is complex not !!!
 
-    state_idx = 0
-    while state_idx < M: # looping over all states
-        state = basis[state_idx]
+    for a in range(M):
+        if a > 0 and s[a] == s[a - 1]:
+            continue
+        elif a < M - 1 and s[a] == s[a + 1]:
+            n = 2
+        else: 
+            n = 1
         
-        n = 0
-        if state_idx < M - 1 and basis[state_idx + 1] == state: n = 2
-        else: n = 1
-
-        # diagonal term
         Ez = 0
-        for i in range(N): # looping over all spins to flip two adjacent spins
-            j = (i + 1) % N
-            if get_spin(state, i) == get_spin(state, j):
-                Ez += 0.25
-            else:
-                Ez -= 0.25
+        for a_bit in range(N):
+            if get_spin(s[a], a_bit) == get_spin(s[a], (a_bit + 1) % N): Ez += 0.25
+            else: Ez -= 0.25
         
-        for i_block in range(n):
-            H[state_idx + i_block][state_idx + i_block] += Ez
+        for i in range(a, a + n):
+            H[i][i] += Ez
         
-        # off diagonal term
-        for i in range(N): # looping over all spins to flip two adjacent spins
+        for i in range(N):
             j = (i + 1) % N
-            
-            if get_spin(state, i) != get_spin(state, j):
-                state_flip = flip(state, i, j) 
-                state_flip_rep, l, q = representative_k_p(state_flip, N)
-                state_flip_rep_idx = findstate(basis, state_flip_rep)
 
-                if state_flip_rep_idx >= 0:
-                    if state_flip_rep_idx < M - 1 and basis[state_flip_rep_idx + 1] == state_flip_rep: m = 2 # do that again
-                    else: m = 1
+            sp = flip(s[a], i, j)
+            r, l, q = representative_k_p(sp, N, k, p)
+            b = findstate(s, r)
 
-                    for j_block in range(m):
-                        for i_block in range(n):
-                            ai = state_idx + i_block
-                            bi = state_flip_rep_idx + j_block
-                            H[ai][bi] += helement(ai, bi, l, q, k, p, R_list, m_list, sigma_list)
+            if b >= 0:
+                if b > 0 and s[b] == s[b - 1]:
+                    m = 2
+                    b = b - 1
+                elif b < M - 1 and s[b] == s[b + 1]:
+                    m = 2
+                else:
+                    m = 1
 
-        state_idx += n  # move to the next state, skipping duplicates
+                for j_block in range(b, b + m):
+                    for i_block in range(a, a + n):
+                        H[i_block][j_block] += helement(i_block, j_block, l, q, k, p, R_list, m_list, sigma_list, N)
 
     return H
 
 if __name__ == "__main__":
-    N = 8
+    N = 6
     mz = 0 # magnetisation
-    k = 0  # - N / 2 + 1 <= k <= N / 2
-    p = -1 # +1 or -1
+    k = 1 # - N / 2 + 1 <= k <= N / 2
+    p = 1 # p = -1, +1
 
     print("N:", N, "mz:", mz, "k:", k, "p:", p)
 
-    basis, R_list, m_list, sigma_list = build_basis_mz_k_p(N, mz, k, p) # or build_basis_not_optimsed(N, mz)
+    basis, periodicities, m_list, sigma_list = build_basis_mz_k_p(N, mz, k, p, True)
     print("Basis:", basis)
     print("Basis in bin:", list_to_bin(basis, N))
-    print("Periodicities:", R_list)
+    print("Periodicities:", periodicities)
     print("m_list:", m_list)
     print("sigma_list:", sigma_list)
     print("Basis size:", len(basis))
@@ -199,7 +189,7 @@ if __name__ == "__main__":
     H = hamiltonian_mz_k_p(N, mz, k, p)
     print("Hamiltonian:")
     # for row in H:
-        # print(row)
+    #     print(row)
 
     eigenvalues, eigenvectors = np.linalg.eig(H)
     print("Eigenvalues:", np.real(np.round(np.sort(eigenvalues), 4))) # even if matrix is complex it is hermitian so the eigenvalues are real
