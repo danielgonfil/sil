@@ -1,7 +1,7 @@
 import numpy as np
 np.set_printoptions(precision=3)
 
-from util import flip, get_spin
+from python.utils import flip, get_spin
 
 def build_basis(N):
     basis = list(range(1 << N))

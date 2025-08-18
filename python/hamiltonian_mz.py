@@ -1,7 +1,7 @@
 import numpy as np
 np.set_printoptions(precision=3)
 
-from util import flip, get_spin, list_to_bin, sum_bits, first_state, next_state, findstate
+from python.utils import flip, get_spin, list_to_bin, sum_bits, first_state, next_state, findstate
 
 def build_basis_mz_not_optimsed(N, mz):
     nup = N // 2 + mz  # number of spins with value 1

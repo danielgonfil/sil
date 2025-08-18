@@ -1,5 +1,5 @@
 import serial
-from python.util import shift
+from python.utils import shift
 
 # MAKE SURE THAT THE FPGA IS PROGRAMMED WITH THE CORRECT N
 

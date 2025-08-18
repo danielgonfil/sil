@@ -3,7 +3,7 @@ from time import time_ns
 import matplotlib.pyplot as plt
 np.set_printoptions(precision=3)
 
-from util import flip, get_spin, list_to_bin, findstate
+from python.utils import flip, get_spin, list_to_bin, findstate
 from hamiltonian_mz import build_basis_mz
 from hamiltonian_mz_k import build_basis_mz_k, representative_k, checkstate_k
 

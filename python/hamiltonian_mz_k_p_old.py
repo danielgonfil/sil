@@ -1,7 +1,7 @@
 import numpy as np
 np.set_printoptions(precision=3)
 
-from util import flip, get_spin, list_to_bin, findstate, shift, reflect
+from python.utils import flip, get_spin, list_to_bin, findstate, shift, reflect
 from hamiltonian_mz import build_basis_mz
 
 def checkstate_k_p(s, N, k, p):
