@@ -1,29 +1,56 @@
 import serial
-from time import time_ns, sleep
+from python.utils import shift, int_to_bin
 
-from python.utils import shift
+# MAKE SURE THAT THE FPGA IS PROGRAMMED WITH THE CORRECT N
 
-ser = serial.Serial('COM4', 9600, timeout=1)  # replace COM3 with your port
+def fpga(ser, N, x):
+    # send state x and receive answer on uart to fpga
+    
+    # prepare message
+    bin_rep = int_to_bin(x)
+    msg = x.to_bytes((len(bin_rep) + 7) // 8, byteorder='big') # convert to bytes
 
-ser.reset_input_buffer()  # Clear the input buffer
-ser.reset_output_buffer()  # Clear the output buffer
-ser.flush()
-start = time_ns()
+    # send message
+    ser.reset_input_buffer()  # Clear the input buffer
+    ser.reset_output_buffer()  # Clear the output buffer
+    ser.write(msg)
 
-#msg = bytes([0b00000011, 0b11111101][::1])
-msg = bytes([0b10101010, 0b10101010][::1])
-msg = bytes([0b11111000, 0b00111000][::1])
-# msg = bytes([0b10101010, 0b00111000][::1])
-x = int.from_bytes(msg, byteorder='big')
-N = 16
-ser.write(msg)
-print("Sent:\t\t", msg, bin(x))
+    # receive data
+    l = int.from_bytes(ser.readline(), byteorder='big')
+    r = shift(x, N, l)
 
-l = int.from_bytes(ser.readline(), byteorder='big')
-print("Received:\t", bin(l))
-r = shift(x, N, l)
-print(bin(x)[2::].zfill(N))
-print(bin(r)[2::].zfill(N))
+    return r, l
 
-end = time_ns()
-print("Elapsed time:\t", (end - start) * 1e-9, "seconds")
+def chekstate_fpga(ser, N, k, x):
+    r, l = fpga(ser, N, x)
+
+    if r != x: # means that not representative
+        return -1
+    else:
+        # if r = x it means that the state is a valid representative, 
+        # and in this case the number of steps to reach it is simply the periodicity
+        
+        if k % (N // l) != 0:  return -1 # period not compatible with k
+        else: return l
+
+def representative_fpga(ser, N, x):
+    r, l = fpga(ser, N, x)
+    
+    # here if r = x and x is the rep, then we get the periodicty and not l = 0
+    # this allows the fpga output to also be interpreted for checkstate (see comment there)
+    
+    if r == x: l = 0 
+    
+    return r, l
+
+if __name__ == "__main__":
+    ser = serial.Serial('COM4', 9600, timeout=1)  # replace COM4 with your port
+    N = 16
+    x = 0b1010101010101010  # example state
+
+    r, l = representative_fpga(ser, N, x)
+    print(f"Representative: {bin(r)[2:].zfill(N)}, Periodicity: {l}")
+
+    k = 4  # example momentum
+    state_check = chekstate_fpga(ser, N, k, x)
+    print(f"State check result: {state_check}")
