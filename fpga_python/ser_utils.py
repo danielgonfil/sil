@@ -1,5 +1,8 @@
+import sys
+sys.path.append('.')  # add python directory to path
+
 import serial
-from python.utils import shift, int_to_bin
+from python.utils import shift
 
 # MAKE SURE THAT THE FPGA IS PROGRAMMED WITH THE CORRECT N
 
@@ -7,8 +10,7 @@ def fpga(ser, N, x):
     # send state x and receive answer on uart to fpga
     
     # prepare message
-    bin_rep = int_to_bin(x)
-    msg = x.to_bytes((len(bin_rep) + 7) // 8, byteorder='big') # convert to bytes
+    msg = x.to_bytes((N + 7) // 8, byteorder='big') # convert to bytes
 
     # send message
     ser.reset_input_buffer()  # Clear the input buffer
@@ -18,10 +20,11 @@ def fpga(ser, N, x):
     # receive data
     l = int.from_bytes(ser.readline(), byteorder='big')
     r = shift(x, N, l)
+    print(l, bin(r))
 
     return r, l
 
-def chekstate_fpga(ser, N, k, x):
+def chekstate_fpga(ser, x, N, k):
     r, l = fpga(ser, N, x)
 
     if r != x: # means that not representative
@@ -33,7 +36,7 @@ def chekstate_fpga(ser, N, k, x):
         if k % (N // l) != 0:  return -1 # period not compatible with k
         else: return l
 
-def representative_fpga(ser, N, x):
+def representative_fpga(ser, x, N, k):
     r, l = fpga(ser, N, x)
     
     # here if r = x and x is the rep, then we get the periodicty and not l = 0
@@ -44,13 +47,12 @@ def representative_fpga(ser, N, x):
     return r, l
 
 if __name__ == "__main__":
-    ser = serial.Serial('COM4', 9600, timeout=1)  # replace COM4 with your port
+    ser = serial.Serial('COM4', 9600, timeout=1)
     N = 16
-    x = 0b1010101010101010  # example state
+    k = 0
 
-    r, l = representative_fpga(ser, N, x)
-    print(f"Representative: {bin(r)[2:].zfill(N)}, Periodicity: {l}")
+    r, l = representative_fpga(ser, 0b0101010101010101,N, k)
+    print(f"r= {bin(r)[2:].zfill(N)}, l= {l}")
 
-    k = 4  # example momentum
-    state_check = chekstate_fpga(ser, N, k, x)
+    state_check = chekstate_fpga(ser, 0b0100010101010101, N, k)
     print(f"State check result: {state_check}")
