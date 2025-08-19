@@ -4,18 +4,6 @@ np.set_printoptions(precision=3)
 from python.utils import flip, get_spin, list_to_bin, findstate, shift
 from hamiltonian_mz import build_basis_mz
 
-def checkstate_k(s, N, k):
-    t = s
-
-    for i in range(1, N+1):
-        t = shift(t, N)
-        if t < s: return -1 # if a smaller state is found, s is not the representative, return -1
-        elif t == s: # after i shifts, back to original state
-            if k % (N // i) != 0:  return -1 # momentum k INcompatible with periodicity i (R = i the periodicity)
-            else: return i # R = i, compatible with periodicity i
-    
-    return -1 # periodicity not compatible with k
-
 def build_basis_mz_k(N, mz, k):
     # NOTE: this is not the actual basis but rather the list of the representatives of the basis states, 
     # which is all we need to build the Hamiltonian !
@@ -31,18 +19,7 @@ def build_basis_mz_k(N, mz, k):
     
     return basis, R_list
 
-def representative_k(s, N, k):
-    # find the representative of the state s, which is the smallest state that can be obtained by translating
-    r = s
-    t = s
-    l = 0
-    for i in range(1, N+1):
-        t = shift(t, N)
-        if t < r: 
-            r = t
-            l = i
-    
-    return r, l # representative, number of translations
+
 
 def hamiltonian_mz_k(N, mz, k):
     basis, R_list = build_basis_mz_k(N, mz, k)
