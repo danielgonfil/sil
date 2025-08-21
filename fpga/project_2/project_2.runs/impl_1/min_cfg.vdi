@@ -1,0 +1,659 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Wed Aug 13 17:52:06 2025
+# Process ID         : 1328
+# Current directory  : C:/Users/Administrator/Desktop/project_2/project_2.runs/impl_1
+# Command line       : vivado.exe -log min_cfg.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source min_cfg.tcl -notrace
+# Log file           : C:/Users/Administrator/Desktop/project_2/project_2.runs/impl_1/min_cfg.vdi
+# Journal file       : C:/Users/Administrator/Desktop/project_2/project_2.runs/impl_1\vivado.jou
+# Running On         : c019243
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : Intel(R) Core(TM) i5-7300U CPU @ 2.60GHz
+# CPU Frequency      : 2712 MHz
+# CPU Physical cores : 2
+# CPU Logical cores  : 4
+# Host memory        : 8416 MB
+# Swap memory        : 3623 MB
+# Total Virtual      : 12040 MB
+# Available Virtual  : 6572 MB
+#-----------------------------------------------------------
+source min_cfg.tcl -notrace
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 494.855 ; gain = 216.590
+Command: link_design -top min_cfg -part xc7a100tcsg324-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 710.133 ; gain = 0.000
+INFO: [Project 1-479] Netlist was created with Vivado 2025.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'CLK100MHZ'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:7]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:7]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CLK100MHZ'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:8]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports CLK100MHZ]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:8]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'SW[0]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[1]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[2]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[3]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[4]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[5]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[6]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[7]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[0]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[1]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[2]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[3]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[4]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[5]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[6]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[7]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:60]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:60]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:61]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:61]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:62]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:62]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:63]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:64]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:64]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:65]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:65]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dp'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:68]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[0]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[1]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:71]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[2]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:72]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[3]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[4]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:74]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:74]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[5]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[6]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[7]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:77]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:77]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxn3'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:144]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:144]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxp3'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:145]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:145]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxn10'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:146]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:146]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxp10'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:147]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:147]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxn2'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:148]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:148]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxp2'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:149]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:149]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxn11'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:150]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:150]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxp11'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:151]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:151]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 832.352 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+5 Infos, 42 Warnings, 42 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 836.414 ; gain = 341.559
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.693 . Memory (MB): peak = 852.484 ; gain = 16.070
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 221ff6980
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1370.211 ; gain = 517.727
+
+Starting Logic Optimization Task
+
+Phase 1 Initialization
+
+Phase 1.1 Core Generation And Design Setup
+Phase 1.1 Core Generation And Design Setup | Checksum: 221ff6980
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1798.867 ; gain = 0.000
+
+Phase 1.2 Setup Constraints And Sort Netlist
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 221ff6980
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1798.867 ; gain = 0.000
+Phase 1 Initialization | Checksum: 221ff6980
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1798.867 ; gain = 0.000
+
+Phase 2 Timer Update And Timing Data Collection
+
+Phase 2.1 Timer Update
+Phase 2.1 Timer Update | Checksum: 221ff6980
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1798.867 ; gain = 0.000
+
+Phase 2.2 Timing Data Collection
+Phase 2.2 Timing Data Collection | Checksum: 221ff6980
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1798.867 ; gain = 0.000
+Phase 2 Timer Update And Timing Data Collection | Checksum: 221ff6980
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1798.867 ; gain = 0.000
+
+Phase 3 Retarget
+INFO: [Opt 31-1851] Number of loadless carry chains removed were: 0
+INFO: [Opt 31-1834] Total Chains To Be Transformed Were: 0 AND Number of Transformed insts Created are: 0
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 3 Retarget | Checksum: 221ff6980
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1798.867 ; gain = 0.000
+Retarget | Checksum: 221ff6980
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 4 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 4 Constant propagation | Checksum: 221ff6980
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1798.867 ; gain = 0.000
+Constant propagation | Checksum: 221ff6980
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 5 Sweep
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1798.867 ; gain = 0.000
+Phase 5 Sweep | Checksum: 221ff6980
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1798.867 ; gain = 0.000
+Sweep | Checksum: 221ff6980
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 6 BUFG optimization
+Phase 6 BUFG optimization | Checksum: 221ff6980
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1798.867 ; gain = 0.000
+BUFG optimization | Checksum: 221ff6980
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 7 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 7 Shift Register Optimization | Checksum: 221ff6980
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1798.867 ; gain = 0.000
+Shift Register Optimization | Checksum: 221ff6980
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 8 Post Processing Netlist
+Phase 8 Post Processing Netlist | Checksum: 221ff6980
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1798.867 ; gain = 0.000
+Post Processing Netlist | Checksum: 221ff6980
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+
+Phase 9 Finalization
+
+Phase 9.1 Finalizing Design Cores and Updating Shapes
+Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 221ff6980
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1798.867 ; gain = 0.000
+
+Phase 9.2 Verifying Netlist Connectivity
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1798.867 ; gain = 0.000
+Phase 9.2 Verifying Netlist Connectivity | Checksum: 221ff6980
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 1798.867 ; gain = 0.000
+Phase 9 Finalization | Checksum: 221ff6980
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 1798.867 ; gain = 0.000
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               0  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 221ff6980
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1798.867 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 221ff6980
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1798.867 ; gain = 0.000
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 221ff6980
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1798.867 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1798.867 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 221ff6980
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1798.867 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+25 Infos, 42 Warnings, 42 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1798.867 ; gain = 962.453
+INFO: [Vivado 12-24828] Executing command : report_drc -file min_cfg_drc_opted.rpt -pb min_cfg_drc_opted.pb -rpx min_cfg_drc_opted.rpx
+Command: report_drc -file min_cfg_drc_opted.rpt -pb min_cfg_drc_opted.pb -rpx min_cfg_drc_opted.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/2025.1/Vivado/data/ip'.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Users/Administrator/Desktop/project_2/project_2.runs/impl_1/min_cfg_drc_opted.rpt.
+report_drc completed successfully
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1798.867 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Administrator/Desktop/project_2/project_2.runs/impl_1/min_cfg_opt.dcp' has been generated.
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-83] Releasing license: Implementation
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Starting Placer Task
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1798.867 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 1302af476
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1798.867 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1798.867 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 13b065924
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.244 . Memory (MB): peak = 1798.867 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 15193420c
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.290 . Memory (MB): peak = 1798.867 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 15193420c
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.290 . Memory (MB): peak = 1798.867 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 15193420c
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.290 . Memory (MB): peak = 1798.867 ; gain = 0.000
+
+Phase 2 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1798.867 ; gain = 0.000
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.291 . Memory (MB): peak = 1798.867 ; gain = 0.000
+INFO: [Place 30-281] No place-able instance is found; design doesn't contain any instance or all instances are placed
+Ending Placer Task | Checksum: 13b065924
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.291 . Memory (MB): peak = 1798.867 ; gain = 0.000
+44 Infos, 42 Warnings, 42 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+INFO: [Vivado 12-24838] Running report commands "report_control_sets, report_io, report_utilization" in parallel.
+Running report generation with 2 threads.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file min_cfg_utilization_placed.rpt -pb min_cfg_utilization_placed.pb
+INFO: [Vivado 12-24828] Executing command : report_control_sets -verbose -file min_cfg_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1798.867 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_io -file min_cfg_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.073 . Memory (MB): peak = 1798.867 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1798.867 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1798.867 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1798.867 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1798.867 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1798.867 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1798.867 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 1798.867 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Administrator/Desktop/project_2/project_2.runs/impl_1/min_cfg_placed.dcp' has been generated.
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Vivado_Tcl 4-241] Physical synthesis in post route mode 
+WARNING: [Vivado_Tcl 4-1385] Design is not legally routed. Skipping post-route optimization
+INFO: [Vivado_Tcl 4-1850] phys_opt_design is skipped because design is not fully routed, please run report_route_status to get more information.
+INFO: [Common 17-83] Releasing license: Implementation
+54 Infos, 43 Warnings, 42 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1798.867 ; gain = 0.000
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1798.867 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1798.867 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.053 . Memory (MB): peak = 1798.867 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1798.867 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1798.867 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.076 . Memory (MB): peak = 1798.867 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Administrator/Desktop/project_2/project_2.runs/impl_1/min_cfg_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: adb64ae ConstDB: 0 ShapeSum: 7e5894e0 RouteDB: b1d25f96
+Post Restoration Checksum: NetGraph: 5c7347c8 | NumContArr: 94b51909 | Constraints: c2a8fa9d | Timing: c2a8fa9d
+Phase 1 Build RT Design | Checksum: 2767a560b
+
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:45 . Memory (MB): peak = 1905.578 ; gain = 106.711
+
+Phase 2 Router Initialization
+INFO: [Route 35-64] No timing constraints were detected. The router will operate in resource-optimization mode.
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 2767a560b
+
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:45 . Memory (MB): peak = 1912.664 ; gain = 113.797
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 2767a560b
+
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:45 . Memory (MB): peak = 1912.664 ; gain = 113.797
+ Number of Nodes with overlaps = 0
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: 2dfddc544
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:45 . Memory (MB): peak = 1935.156 ; gain = 136.289
+
+Phase 3 Global Routing
+Phase 3 Global Routing | Checksum: 2dfddc544
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:45 . Memory (MB): peak = 1935.156 ; gain = 136.289
+
+Phase 4 Initial Routing
+
+Phase 4.1 Initial Net Routing Pass
+ Number of Nodes with overlaps = 0
+Phase 4.1 Initial Net Routing Pass | Checksum: 2dfddc544
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:45 . Memory (MB): peak = 1935.156 ; gain = 136.289
+Phase 4 Initial Routing | Checksum: 2dfddc544
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:45 . Memory (MB): peak = 1935.156 ; gain = 136.289
+
+Phase 5 Rip-up And Reroute
+
+Phase 5.1 Global Iteration 0
+Phase 5.1 Global Iteration 0 | Checksum: 2dfddc544
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:45 . Memory (MB): peak = 1935.156 ; gain = 136.289
+Phase 5 Rip-up And Reroute | Checksum: 2dfddc544
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:45 . Memory (MB): peak = 1935.156 ; gain = 136.289
+
+Phase 6 Delay and Skew Optimization
+Phase 6 Delay and Skew Optimization | Checksum: 2dfddc544
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:45 . Memory (MB): peak = 1935.156 ; gain = 136.289
+
+Phase 7 Post Hold Fix
+
+Phase 7.1 Hold Fix Iter
+Phase 7.1 Hold Fix Iter | Checksum: 2dfddc544
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:45 . Memory (MB): peak = 1935.156 ; gain = 136.289
+Phase 7 Post Hold Fix | Checksum: 2dfddc544
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:45 . Memory (MB): peak = 1935.156 ; gain = 136.289
+
+Phase 8 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+
+--GLOBAL Congestion:
+Utilization threshold used for congestion level computation: 0.85
+Congestion Report
+North Dir 1x1 Area, Max Cong = 0%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 0%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 0%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 0%, No Congested Regions.
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+
+Phase 8 Route finalize | Checksum: 2dfddc544
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:45 . Memory (MB): peak = 1935.156 ; gain = 136.289
+
+Phase 9 Verifying routed nets
+
+ Verification completed successfully
+Phase 9 Verifying routed nets | Checksum: 2dfddc544
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:45 . Memory (MB): peak = 1935.156 ; gain = 136.289
+
+Phase 10 Depositing Routes
+Phase 10 Depositing Routes | Checksum: 2dfddc544
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:45 . Memory (MB): peak = 1935.156 ; gain = 136.289
+
+Phase 11 Post Process Routing
+Phase 11 Post Process Routing | Checksum: 2dfddc544
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:45 . Memory (MB): peak = 1935.156 ; gain = 136.289
+Total Elapsed time in route_design: 45.159 secs
+
+Phase 12 Post-Route Event Processing
+Phase 12 Post-Route Event Processing | Checksum: 12f01b26f
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:45 . Memory (MB): peak = 1935.156 ; gain = 136.289
+INFO: [Route 35-16] Router Completed Successfully
+Ending Routing Task | Checksum: 12f01b26f
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:45 . Memory (MB): peak = 1935.156 ; gain = 136.289
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+61 Infos, 43 Warnings, 42 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:50 ; elapsed = 00:00:45 . Memory (MB): peak = 1935.156 ; gain = 136.289
+INFO: [Vivado 12-24828] Executing command : report_drc -file min_cfg_drc_routed.rpt -pb min_cfg_drc_routed.pb -rpx min_cfg_drc_routed.rpx
+Command: report_drc -file min_cfg_drc_routed.rpt -pb min_cfg_drc_routed.pb -rpx min_cfg_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Users/Administrator/Desktop/project_2/project_2.runs/impl_1/min_cfg_drc_routed.rpt.
+report_drc completed successfully
+INFO: [Vivado 12-24828] Executing command : report_methodology -file min_cfg_methodology_drc_routed.rpt -pb min_cfg_methodology_drc_routed.pb -rpx min_cfg_methodology_drc_routed.rpx
+Command: report_methodology -file min_cfg_methodology_drc_routed.rpt -pb min_cfg_methodology_drc_routed.pb -rpx min_cfg_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file C:/Users/Administrator/Desktop/project_2/project_2.runs/impl_1/min_cfg_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [Vivado 12-24828] Executing command : report_timing_summary -max_paths 10 -routable_nets -report_unconstrained -file min_cfg_timing_summary_routed.rpt -pb min_cfg_timing_summary_routed.pb -rpx min_cfg_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+INFO: [Vivado 12-24838] Running report commands "report_incremental_reuse, report_route_status" in parallel.
+Running report generation with 2 threads.
+INFO: [Vivado 12-24828] Executing command : report_incremental_reuse -file min_cfg_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [Vivado 12-24828] Executing command : report_route_status -file min_cfg_route_status.rpt -pb min_cfg_route_status.pb
+INFO: [Vivado 12-24828] Executing command : report_power -file min_cfg_power_routed.rpt -pb min_cfg_power_summary_routed.pb -rpx min_cfg_power_routed.rpx
+Command: report_power -file min_cfg_power_routed.rpt -pb min_cfg_power_summary_routed.pb -rpx min_cfg_power_routed.rpx
+WARNING: [Power 33-232] No user defined clocks were found in the design! Power estimation will be inaccurate until this is corrected.
+Resolution: Please specify clocks using create_clock/create_generated_clock for sequential elements. For pure combinatorial circuits, please specify a virtual clock, otherwise the vectorless estimation might be inaccurate
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+78 Infos, 45 Warnings, 42 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [Vivado 12-24828] Executing command : report_clock_utilization -file min_cfg_clock_utilization_routed.rpt
+INFO: [Vivado 12-24828] Executing command : report_bus_skew -warn_on_violation -file min_cfg_bus_skew_routed.rpt -pb min_cfg_bus_skew_routed.pb -rpx min_cfg_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1966.504 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1966.504 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1966.504 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1966.504 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1966.504 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1966.504 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.053 . Memory (MB): peak = 1966.504 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Administrator/Desktop/project_2/project_2.runs/impl_1/min_cfg_routed.dcp' has been generated.
+Command: write_bitstream -force min_cfg.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+ERROR: [DRC NSTD-1] Unspecified I/O Standard: 8 out of 8 logical ports use I/O standard (IOSTANDARD) value 'DEFAULT', instead of a user assigned specific value. This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all I/O standards. This design will fail to generate a bitstream unless all logical ports have a user specified I/O standard value defined. To allow bitstream creation with unspecified I/O standard values (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks NSTD-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run. Problem ports: out[7:0].
+ERROR: [DRC UCIO-1] Unconstrained Logical Port: 8 out of 8 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: out[7:0].
+INFO: [Vivado 12-3199] DRC finished with 2 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado 12-1345] Error(s) found during DRC. Bitgen not run.
+INFO: [Common 17-83] Releasing license: Implementation
+90 Infos, 45 Warnings, 42 Critical Warnings and 3 Errors encountered.
+write_bitstream failed
+ERROR: [Common 17-39] 'write_bitstream' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Wed Aug 13 17:53:29 2025...

@@ -1,0 +1,12 @@
+0.7
+2020.2
+May 22 2025
+00:13:55
+C:/Users/Administrator/Desktop/project_3/project_3.sim/sim_1/behav/xsim/glbl.v,1741209010,verilog,,,,glbl,,uvm,,,,,,
+C:/Users/Administrator/Desktop/project_3/project_3.srcs/sim_1/new/tb_led.sv,1755174633,systemVerilog,,,,tb_led,,uvm,../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/Administrator/Desktop/project_3/project_3.srcs/sim_1/new/tb_translate.sv,1755167561,systemVerilog,,,,tb_translate,,uvm,../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/led.sv,1755173324,systemVerilog,,C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/min_l.sv,,led,,uvm,../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/min.sv,1755171887,systemVerilog,,C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/symmetrization.sv,,min,,uvm,../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/min_l.sv,1755174242,systemVerilog,,C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/symmetrization.sv,,min_l,,uvm,../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/symmetrization.sv,1755175991,systemVerilog,,C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/translate.sv,,symmetrization,,uvm,../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/translate.sv,1755172460,systemVerilog,,C:/Users/Administrator/Desktop/project_3/project_3.srcs/sim_1/new/tb_led.sv,,translate,,uvm,../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,

@@ -1,0 +1,8 @@
+0.7
+2020.2
+May 22 2025
+00:13:55
+C:/Users/Administrator/Desktop/project_4/project_4.sim/sim_1/behav/xsim/glbl.v,1741209010,verilog,,,,glbl,,uvm,,,,,,
+C:/Users/Administrator/Desktop/project_4/project_4.srcs/sim_1/new/tb_led.sv,1755185576,systemVerilog,,,,tb_led,,uvm,../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/Administrator/Desktop/project_4/project_4.srcs/sources_1/new/led.sv,1755186282,systemVerilog,,C:/Users/Administrator/Desktop/project_4/project_4.srcs/sim_1/new/tb_led.sv,,led,,uvm,../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/Administrator/Desktop/project_4/project_4.srcs/sources_1/new/symmetrization.sv,1755184727,systemVerilog,,C:/Users/Administrator/Desktop/project_4/project_4.srcs/sources_1/new/seg_decoder.sv,,symmetrization,,uvm,../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,

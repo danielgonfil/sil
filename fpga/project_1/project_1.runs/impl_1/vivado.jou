@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Wed Aug 13 17:54:46 2025
+# Process ID         : 9740
+# Current directory  : C:/Users/Administrator/Desktop/project_1/project_1.runs/impl_1
+# Command line       : vivado.exe -log logic_ex.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source logic_ex.tcl -notrace
+# Log file           : C:/Users/Administrator/Desktop/project_1/project_1.runs/impl_1/logic_ex.vdi
+# Journal file       : C:/Users/Administrator/Desktop/project_1/project_1.runs/impl_1\vivado.jou
+# Running On         : c019243
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : Intel(R) Core(TM) i5-7300U CPU @ 2.60GHz
+# CPU Frequency      : 2712 MHz
+# CPU Physical cores : 2
+# CPU Logical cores  : 4
+# Host memory        : 8416 MB
+# Swap memory        : 3623 MB
+# Total Virtual      : 12040 MB
+# Available Virtual  : 6572 MB
+#-----------------------------------------------------------
+source logic_ex.tcl -notrace

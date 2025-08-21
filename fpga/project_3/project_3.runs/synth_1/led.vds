@@ -1,0 +1,375 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Thu Aug 14 14:37:58 2025
+# Process ID         : 276
+# Current directory  : C:/Users/Administrator/Desktop/project_3/project_3.runs/synth_1
+# Command line       : vivado.exe -log led.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source led.tcl
+# Log file           : C:/Users/Administrator/Desktop/project_3/project_3.runs/synth_1/led.vds
+# Journal file       : C:/Users/Administrator/Desktop/project_3/project_3.runs/synth_1\vivado.jou
+# Running On         : c019243
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : Intel(R) Core(TM) i5-7300U CPU @ 2.60GHz
+# CPU Frequency      : 2712 MHz
+# CPU Physical cores : 2
+# CPU Logical cores  : 4
+# Host memory        : 8416 MB
+# Swap memory        : 3623 MB
+# Total Virtual      : 12040 MB
+# Available Virtual  : 3563 MB
+#-----------------------------------------------------------
+source led.tcl -notrace
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 493.562 ; gain = 213.137
+Command: read_checkpoint -auto_incremental -incremental C:/Users/Administrator/Desktop/project_3/project_3.srcs/utils_1/imports/synth_1/translate.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/Administrator/Desktop/project_3/project_3.srcs/utils_1/imports/synth_1/translate.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top led -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 7200
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1199.543 ; gain = 493.980
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'led' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/led.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'symmetrization' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/symmetrization.sv:23]
+	Parameter N bound to: 32'sb00000000000000000000000000000100 
+INFO: [Synth 8-6157] synthesizing module 'translate' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/translate.sv:23]
+	Parameter N bound to: 32'sb00000000000000000000000000000100 
+	Parameter STEPS bound to: 32'sb00000000000000000000000000000001 
+INFO: [Synth 8-6155] done synthesizing module 'translate' (0#1) [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/translate.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'min_l' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/min_l.sv:23]
+	Parameter N bound to: 32'sb00000000000000000000000000000100 
+INFO: [Synth 8-6155] done synthesizing module 'min_l' (0#1) [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/min_l.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'translate__parameterized0' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/translate.sv:23]
+	Parameter N bound to: 32'sb00000000000000000000000000000100 
+	Parameter STEPS bound to: 32'sb00000000000000000000000000000010 
+INFO: [Synth 8-6155] done synthesizing module 'translate__parameterized0' (0#1) [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/translate.sv:23]
+WARNING: [Synth 8-445] multiply driven output port connection 'out' in instance array 'u_translate_gen' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/symmetrization.sv:43]
+WARNING: [Synth 8-445] multiply driven output port connection 'out' in instance array 'u_min_l_gen' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/symmetrization.sv:48]
+WARNING: [Synth 8-445] multiply driven output port connection 'out_l' in instance array 'u_min_l_gen' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/symmetrization.sv:48]
+INFO: [Synth 8-6157] synthesizing module 'translate__parameterized1' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/translate.sv:23]
+	Parameter N bound to: 32'sb00000000000000000000000000000100 
+	Parameter STEPS bound to: 32'sb00000000000000000000000000000011 
+INFO: [Synth 8-6155] done synthesizing module 'translate__parameterized1' (0#1) [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/translate.sv:23]
+WARNING: [Synth 8-445] multiply driven output port connection 'out' in instance array 'u_translate_gen' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/symmetrization.sv:43]
+WARNING: [Synth 8-445] multiply driven output port connection 'out' in instance array 'u_min_l_gen' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/symmetrization.sv:48]
+WARNING: [Synth 8-445] multiply driven output port connection 'out_l' in instance array 'u_min_l_gen' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/symmetrization.sv:48]
+INFO: [Synth 8-6155] done synthesizing module 'symmetrization' (0#1) [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/symmetrization.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'led' (0#1) [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/led.sv:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1306.027 ; gain = 600.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1306.027 ; gain = 600.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1306.027 ; gain = 600.465
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1306.027 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'CLK100MHZ'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:7]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:7]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CLK100MHZ'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:8]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports CLK100MHZ]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:8]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:60]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:60]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:61]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:61]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:62]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:62]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:63]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:64]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:64]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:65]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:65]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dp'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:68]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[0]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[1]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:71]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[2]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:72]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[3]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[4]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:74]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:74]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[5]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[6]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[7]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:77]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:77]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxn3'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:144]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:144]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxp3'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:145]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:145]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxn10'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:146]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:146]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxp10'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:147]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:147]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxn2'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:148]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:148]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxp2'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:149]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:149]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxn11'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:150]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:150]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxp11'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:151]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:151]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/led_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/led_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1367.586 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1367.586 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1367.586 ; gain = 662.023
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1367.586 ; gain = 662.023
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1367.586 ; gain = 662.023
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1367.586 ; gain = 662.023
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'u_symmetrization/gen_translate_and_min_l[2].u_translate_gen[0]' (translate__parameterized0) to 'u_symmetrization/gen_translate_and_min_l[2].u_translate_gen[1]'
+INFO: [Synth 8-223] decloning instance 'u_symmetrization/gen_translate_and_min_l[3].u_translate_gen[0]' (translate__parameterized1) to 'u_symmetrization/gen_translate_and_min_l[3].u_translate_gen[1]'
+INFO: [Synth 8-223] decloning instance 'u_symmetrization/gen_translate_and_min_l[3].u_translate_gen[0]' (translate__parameterized1) to 'u_symmetrization/gen_translate_and_min_l[3].u_translate_gen[2]'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input    4 Bit        Muxes := 6     
+	   2 Input    3 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1367.586 ; gain = 662.023
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1508.234 ; gain = 802.672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1508.309 ; gain = 802.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1518.191 ; gain = 812.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1752.996 ; gain = 1047.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1752.996 ; gain = 1047.434
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_symmetrization/mins[2][0] with 1st driver pin 'u_symmetrization/gen_translate_and_min_l[2].u_min_l_gen[0]/out1__6/O' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/min_l.sv:33]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_symmetrization/mins[2][0] with 2nd driver pin 'u_symmetrization/gen_translate_and_min_l[2].u_min_l_gen[0]/out1__5/O' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/min_l.sv:33]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_symmetrization/mins[2][1] with 1st driver pin 'u_symmetrization/gen_translate_and_min_l[2].u_min_l_gen[0]/out1__4/O' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/min_l.sv:33]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_symmetrization/mins[2][1] with 2nd driver pin 'u_symmetrization/gen_translate_and_min_l[2].u_min_l_gen[0]/out1__3/O' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/min_l.sv:33]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_symmetrization/mins[2][2] with 1st driver pin 'u_symmetrization/gen_translate_and_min_l[2].u_min_l_gen[0]/out1__2/O' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/min_l.sv:33]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_symmetrization/mins[2][2] with 2nd driver pin 'u_symmetrization/gen_translate_and_min_l[2].u_min_l_gen[0]/out1__1/O' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/min_l.sv:33]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_symmetrization/mins[2][3] with 1st driver pin 'u_symmetrization/gen_translate_and_min_l[2].u_min_l_gen[0]/out1__0/O' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/min_l.sv:33]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_symmetrization/mins[2][3] with 2nd driver pin 'u_symmetrization/gen_translate_and_min_l[2].u_min_l_gen[0]/out1/O' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/min_l.sv:33]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_symmetrization/ls[2][2] with 1st driver pin 'u_symmetrization/gen_translate_and_min_l[1].u_min_l_gen[0]/out1__0/O' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/min_l.sv:34]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_symmetrization/ls[2][2] with 2nd driver pin 'u_symmetrization/gen_translate_and_min_l[1].u_min_l_gen[0]/out1/O' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/min_l.sv:34]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_symmetrization/gen_translate_and_min_l[1].u_min_l_gen[0]/out1__2_n_0 with 1st driver pin 'u_symmetrization/gen_translate_and_min_l[1].u_min_l_gen[0]/out1__2/O' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/led.sv:23]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin u_symmetrization/gen_translate_and_min_l[1].u_min_l_gen[0]/out1__2_n_0 with 2nd driver pin 'u_symmetrization/gen_translate_and_min_l[1].u_min_l_gen[0]/out1__1/O' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/led.sv:23]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin l_OBUF[1] with 1st driver pin 'u_symmetrization/gen_translate_and_min_l[2].u_min_l_gen[0]/out1__9/O' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/led.sv:23]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin l_OBUF[1] with 2nd driver pin 'u_symmetrization/gen_translate_and_min_l[2].u_min_l_gen[0]/out1__8/O' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/led.sv:23]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin l_OBUF[1] with 3rd driver pin 'u_symmetrization/gen_translate_and_min_l[2].u_min_l_gen[0]/out1__7/O' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/led.sv:23]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin l_OBUF[0] with 1st driver pin 'l_OBUF[0]_inst_i_1/O' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/led.sv:23]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin l_OBUF[0] with 2nd driver pin 'l_OBUF[0]_inst_i_2/O' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/led.sv:23]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin l_OBUF[0] with 3rd driver pin 'l_OBUF[0]_inst_i_3/O' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/led.sv:23]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin l_OBUF[2] with 1st driver pin 'l_OBUF[2]_inst_i_1/O' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/min_l.sv:34]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin l_OBUF[2] with 2nd driver pin 'l_OBUF[2]_inst_i_2/O' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/min_l.sv:34]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin l_OBUF[2] with 3rd driver pin 'l_OBUF[2]_inst_i_3/O' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/min_l.sv:34]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LED_OBUF[3] with 1st driver pin 'LED_OBUF[3]_inst_i_1/O' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/min_l.sv:33]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LED_OBUF[3] with 2nd driver pin 'LED_OBUF[3]_inst_i_2/O' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/min_l.sv:33]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LED_OBUF[3] with 3rd driver pin 'LED_OBUF[3]_inst_i_3/O' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/min_l.sv:33]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LED_OBUF[2] with 1st driver pin 'LED_OBUF[2]_inst_i_1/O' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/min_l.sv:33]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LED_OBUF[2] with 2nd driver pin 'LED_OBUF[2]_inst_i_2/O' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/min_l.sv:33]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LED_OBUF[2] with 3rd driver pin 'LED_OBUF[2]_inst_i_3/O' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/min_l.sv:33]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LED_OBUF[1] with 1st driver pin 'LED_OBUF[1]_inst_i_1/O' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/min_l.sv:33]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LED_OBUF[1] with 2nd driver pin 'LED_OBUF[1]_inst_i_2/O' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/min_l.sv:33]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LED_OBUF[1] with 3rd driver pin 'LED_OBUF[1]_inst_i_3/O' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/min_l.sv:33]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LED_OBUF[0] with 1st driver pin 'LED_OBUF[0]_inst_i_1/O' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/min_l.sv:33]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LED_OBUF[0] with 2nd driver pin 'LED_OBUF[0]_inst_i_2/O' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/min_l.sv:33]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LED_OBUF[0] with 3rd driver pin 'LED_OBUF[0]_inst_i_3/O' [C:/Users/Administrator/Desktop/project_3/project_3.srcs/sources_1/new/min_l.sv:33]
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|       13|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1752.996 ; gain = 1047.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1752.996 ; gain = 1047.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1752.996 ; gain = 1047.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1752.996 ; gain = 1047.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT2 |     5|
+|2     |LUT3 |     2|
+|3     |LUT4 |    14|
+|4     |LUT5 |     9|
+|5     |LUT6 |     4|
+|6     |IBUF |     4|
+|7     |OBUF |     7|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1752.996 ; gain = 1047.434
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 33 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:39 . Memory (MB): peak = 1752.996 ; gain = 985.875
+Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1752.996 ; gain = 1047.434
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1752.996 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1752.996 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: e4b4865e
+INFO: [Common 17-83] Releasing license: Synthesis
+34 Infos, 33 Warnings, 59 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:57 . Memory (MB): peak = 1752.996 ; gain = 1251.816
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1752.996 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Administrator/Desktop/project_3/project_3.runs/synth_1/led.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file led_utilization_synth.rpt -pb led_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Aug 14 14:39:13 2025...

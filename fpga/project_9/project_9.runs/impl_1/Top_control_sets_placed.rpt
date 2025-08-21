@@ -1,0 +1,206 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+| Date         : Wed Aug 20 17:48:20 2025
+| Host         : c019243 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Top_control_sets_placed.rpt
+| Design       : Top
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   128 |
+|    Minimum number of control sets                        |   128 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   283 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   128 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |    25 |
+| >= 6 to < 8        |    13 |
+| >= 8 to < 10       |    22 |
+| >= 10 to < 12      |    11 |
+| >= 12 to < 14      |     7 |
+| >= 14 to < 16      |     3 |
+| >= 16              |    46 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             683 |          284 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             105 |           48 |
+| Yes          | No                    | No                     |            1894 |          612 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             243 |           80 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------+----------------------------------------------+----------------------------------------------+------------------+----------------+--------------+
+|     Clock Signal     |                 Enable Signal                |               Set/Reset Signal               | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------------+----------------------------------------------+----------------------------------------------+------------------+----------------+--------------+
+|  eth_tx_clk_IBUF     |                                              |                                              |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/FSM_sequential_n508[3]_i_2_n_0 | i_FC_1002_MII/FSM_sequential_n508[3]_i_1_n_0 |                3 |              4 |         1.33 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/II_MII_1/n909                  |                                              |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n1392/n533/p_1_in              |                                              |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG |                                              | i_FC_1002_MII/n670[2]_i_1_n_0                |                2 |              4 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG |                                              | i_FC_1002_MII/n121[n19][9]_i_1_n_0           |                2 |              4 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n1354[n54][n39]                | i_FC_1002_MII/n685[3]_i_1_n_0                |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG |                                              | i_FC_1002_MII/n1381                          |                3 |              4 |         1.33 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n891_i_1_n_0                   |                                              |                2 |              4 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n121[n25][4]_i_1_n_0           |                                              |                2 |              4 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n720[9]_i_1_n_0                | i_FC_1002_MII/n720[10]_i_1_n_0               |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n1383/n207_reg[1]__0_n_0       | i_FC_1002_MII/n728[6]_i_1_n_0                |                2 |              4 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n442[3]_i_1_n_0                |                                              |                3 |              4 |         1.33 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/FSM_sequential_n374[3]_i_1_n_0 |                                              |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n657[n25][4]_i_1_n_0           |                                              |                2 |              4 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n731[3]_i_1_n_0                |                                              |                2 |              4 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n726[3]_i_1_n_0                |                                              |                3 |              4 |         1.33 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n1383/n676_reg[n_n_0_41]       | i_FC_1002_MII/n686[3]_i_1_n_0                |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/II_MII_1/n910                  |                                              |                1 |              5 |         5.00 |
+|  CLK100MHZ_IBUF_BUFG |                                              | i_FC_1002_MII/n1392/n517_reg_n_0             |                2 |              5 |         2.50 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n1383/n207_reg[1]__0_n_0       |                                              |                1 |              5 |         5.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n1354[n54][n42]                | i_FC_1002_MII/n294[4]_i_1_n_0                |                2 |              5 |         2.50 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/II_MII_1/n761                  |                                              |                1 |              5 |         5.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n721[7]_i_2_n_0                | i_FC_1002_MII/n721[7]_i_1_n_0                |                2 |              5 |         2.50 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/MII_RST_N                      | i_FC_1002_MII/n1383/n638                     |                2 |              5 |         2.50 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n1383/n687/n732                | i_FC_1002_MII/n732[10]_i_1_n_0               |                2 |              5 |         2.50 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n511[7]_i_2_n_0                | i_FC_1002_MII/n511[7]_i_1_n_0                |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n718[5]_i_1_n_0                |                                              |                3 |              6 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n624[n1]_i_1_n_0               |                                              |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/FSM_onehot_n374[5]__0_i_2_n_0  | i_FC_1002_MII/FSM_onehot_n374[5]__0_i_1_n_0  |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n1392/n533/n209                |                                              |                1 |              7 |         7.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n728[6]_i_1_n_0                |                                              |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n732[10]_i_1_n_0               |                                              |                3 |              7 |         2.33 |
+|  CLK100MHZ_IBUF_BUFG |                                              | i_FC_1002_MII/n1383/clear                    |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n720[9]_i_1_n_0                |                                              |                5 |              7 |         1.40 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n1383/n687/n732                |                                              |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n1354[n54][n38]                | i_FC_1002_MII/n683[6]_i_1_n_0                |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG |                                              | i_FC_1002_MII/n1392/n73                      |                3 |              7 |         2.33 |
+|  CLK100MHZ_IBUF_BUFG | ILATestP.clk_cnt[16]_i_1_n_0                 | ILATestP.wait_ms[6]_i_1_n_0                  |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n794[7]_i_1_n_0                |                                              |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n1392/n533/n208                |                                              |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n205[7]_i_1_n_0                |                                              |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n715[7]_i_1_n_0                |                                              |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n711[7]_i_1_n_0                |                                              |                5 |              8 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n715[7]_i_1_n_0                | i_FC_1002_MII/n715[15]_i_1_n_0               |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n655[n14][7]_i_1_n_0           |                                              |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n647[7]_i_1_n_0                |                                              |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n465[7]_i_1_n_0                |                                              |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n115[7]_i_1_n_0                |                                              |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n127[n37][n34][7]_i_1_n_0      |                                              |                5 |              8 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n1383/n687/n788                |                                              |                6 |              8 |         1.33 |
+|  CLK100MHZ_IBUF_BUFG |                                              | i_FC_1002_MII/n212[7]_i_1_n_0                |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n733[7]_i_1__0_n_0             |                                              |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n521[7]_i_1_n_0                | i_FC_1002_MII/n1392/n525                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n1383/n687/n713                |                                              |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | ILATestP.f0[7]_i_1_n_0                       |                                              |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | ILATestP.f1[7]_i_1_n_0                       |                                              |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n77[7]_i_1_n_0                 |                                              |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n306[9]_i_2_n_0                | i_FC_1002_MII/n306[9]_i_1_n_0                |                2 |              9 |         4.50 |
+|  CLK100MHZ_IBUF_BUFG |                                              | i_FC_1002_MII/n636[9]_i_1_n_0                |                4 |              9 |         2.25 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n1383/n668                     |                                              |                6 |              9 |         1.50 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n1354[n54][n40]                | i_FC_1002_MII/n684[9]_i_1_n_0                |                4 |             10 |         2.50 |
+|  CLK100MHZ_IBUF_BUFG |                                              | i_FC_1002_MII/n1354[n50]                     |                9 |             10 |         1.11 |
+|  CLK100MHZ_IBUF_BUFG |                                              | i_FC_1002_MII/FSM_sequential_n508[3]_i_1_n_0 |                6 |             10 |         1.67 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/FSM_onehot_n374[9]_i_1_n_0     |                                              |                4 |             10 |         2.50 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n764[10]_i_1_n_0               |                                              |                5 |             11 |         2.20 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n735[10]_i_2_n_0               | i_FC_1002_MII/n735[10]_i_1_n_0               |                4 |             11 |         2.75 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n1383/n687/p_0_out[1]          |                                              |                4 |             11 |         2.75 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/CommandHeader[13]_i_1_n_0      |                                              |                4 |             11 |         2.75 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n437[10]_i_2_n_0               | i_FC_1002_MII/n437[10]_i_1_n_0               |                3 |             11 |         3.67 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n1383/n687/n777                |                                              |                3 |             11 |         3.67 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n631[10]_i_1_n_0               |                                              |                5 |             11 |         2.20 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n782[10]_i_1_n_0               |                                              |                3 |             12 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/II_MII_1/n747                  |                                              |                3 |             12 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n316[12]_i_1_n_0               |                                              |                3 |             13 |         4.33 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n1390/n435                     | i_FC_1002_MII/FSM_onehot_n374[5]__0_i_1_n_0  |                4 |             13 |         3.25 |
+|  CLK100MHZ_IBUF_BUFG |                                              | i_FC_1002_MII/n1383/n687/n753                |                5 |             13 |         2.60 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n317[12]_i_2_n_0               | i_FC_1002_MII/n317[12]_i_1_n_0               |                4 |             13 |         3.25 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n417[12]_i_1_n_0               |                                              |                4 |             13 |         3.25 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n452[13]_i_1_n_0               | i_FC_1002_MII/FSM_onehot_n374[5]__0_i_1_n_0  |                5 |             14 |         2.80 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n420[14]_i_1_n_0               |                                              |                4 |             15 |         3.75 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n436[14]_i_2_n_0               | i_FC_1002_MII/n436[14]_i_1_n_0               |                5 |             15 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n1383/n183                     |                                              |                5 |             16 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n1383/n687/n713                | i_FC_1002_MII/n783[15]_i_1_n_0               |                5 |             16 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n756[15]_i_1_n_0               |                                              |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | ILATestP.v[14]_i_1_n_0                       |                                              |                4 |             16 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n1390/n444                     |                                              |                4 |             16 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n440[15]_i_2_n_0               | i_FC_1002_MII/n440[15]_i_1_n_0               |                5 |             16 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n308[15]_i_1_n_0               |                                              |                5 |             16 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | ILATestP.clk_cnt[16]_i_2_n_0                 | ILATestP.clk_cnt[16]_i_1_n_0                 |                4 |             16 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n657[n29][15]_i_1_n_0          |                                              |                5 |             16 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n713[39]_i_1_n_0               | i_FC_1002_MII/n749[16]_i_1__0_n_0            |                4 |             17 |         4.25 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n1383/n632                     |                                              |                4 |             20 |         5.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n392[7]_i_1_n_0                |                                              |                4 |             20 |         5.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n732[10]_i_1__0_n_0            |                                              |                8 |             20 |         2.50 |
+|  CLK100MHZ_IBUF_BUFG |                                              | i_FC_1002_MII/n1391/n290_reg_n_0             |                8 |             24 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n664[31]_i_1_n_0               |                                              |               13 |             31 |         2.38 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n1383/n700                     |                                              |               18 |             31 |         1.72 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n1391/n263                     |                                              |                8 |             32 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n265[31]_i_1_n_0               |                                              |                6 |             32 |         5.33 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n746[31]_i_1__0_n_0            |                                              |               23 |             32 |         1.39 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/MII_RST_N                      |                                              |               15 |             32 |         2.13 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n655[n12][31]_i_1_n_0          |                                              |                7 |             32 |         4.57 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n264[0]_i_1_n_0                |                                              |                8 |             32 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n657[n20][15]_i_1_n_0          |                                              |               10 |             32 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n657[n23][31]_i_1_n_0          |                                              |               10 |             32 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n656[n19][15]_i_1_n_0          |                                              |               13 |             32 |         2.46 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n657[n24][31]_i_1_n_0          |                                              |                9 |             32 |         3.56 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n257[31]_i_1_n_0               |                                              |               11 |             32 |         2.91 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n1382/n565                     |                                              |                8 |             32 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n245[31]_i_1_n_0               |                                              |               11 |             32 |         2.91 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n178[31]_i_1_n_0               |                                              |                8 |             32 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n177[31]_i_1_n_0               |                                              |                6 |             32 |         5.33 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n1391/n249                     |                                              |                9 |             32 |         3.56 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n1391/n244                     |                                              |               10 |             32 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n1392/wd                       |                                              |                5 |             34 |         6.80 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n113[15]_i_1_n_0               |                                              |               11 |             36 |         3.27 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/CommandHeader[63]_i_1_n_0      |                                              |                6 |             37 |         6.17 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n654[n5][47]_i_1_n_0           |                                              |               13 |             48 |         3.69 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n1383/n713                     |                                              |               13 |             56 |         4.31 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n713[39]_i_1_n_0               |                                              |               18 |             57 |         3.17 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n439[79]_i_1_n_0               |                                              |               24 |             57 |         2.38 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n1392/n525                     |                                              |               14 |             66 |         4.71 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n1390/n246                     |                                              |               26 |             96 |         3.69 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n246[15]_i_1__0_n_0            |                                              |               30 |             96 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n1390/n428                     |                                              |               34 |             96 |         2.82 |
+|  CLK100MHZ_IBUF_BUFG | i_FC_1002_MII/n1384/n248                     |                                              |               31 |             96 |         3.10 |
+|  CLK100MHZ_IBUF_BUFG |                                              |                                              |              283 |            682 |         2.41 |
++----------------------+----------------------------------------------+----------------------------------------------+------------------+----------------+--------------+
+
+

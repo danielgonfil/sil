@@ -1,0 +1,407 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Wed Aug 13 17:33:18 2025
+# Process ID         : 7552
+# Current directory  : C:/Users/Administrator/Desktop/project_2/project_2.runs/synth_1
+# Command line       : vivado.exe -log min_cfg.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source min_cfg.tcl
+# Log file           : C:/Users/Administrator/Desktop/project_2/project_2.runs/synth_1/min_cfg.vds
+# Journal file       : C:/Users/Administrator/Desktop/project_2/project_2.runs/synth_1\vivado.jou
+# Running On         : c019243
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : Intel(R) Core(TM) i5-7300U CPU @ 2.60GHz
+# CPU Frequency      : 2712 MHz
+# CPU Physical cores : 2
+# CPU Logical cores  : 4
+# Host memory        : 8416 MB
+# Swap memory        : 3623 MB
+# Total Virtual      : 12040 MB
+# Available Virtual  : 4990 MB
+#-----------------------------------------------------------
+source min_cfg.tcl -notrace
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 494.793 ; gain = 212.836
+Command: read_checkpoint -auto_incremental -incremental C:/Users/Administrator/Desktop/project_2/project_2.srcs/utils_1/imports/synth_1/led.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/Administrator/Desktop/project_2/project_2.srcs/utils_1/imports/synth_1/led.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top min_cfg -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 2672
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1197.496 ; gain = 495.656
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'min_cfg' [C:/Users/Administrator/Desktop/project_2/project_2.srcs/sources_1/new/min_cfg.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'translate' [C:/Users/Administrator/Desktop/project_2/project_2.srcs/sources_1/new/translate.sv:23]
+	Parameter N bound to: 32'sb00000000000000000000000000001000 
+	Parameter STEPS bound to: 32'sb00000000000000000000000000000000 
+INFO: [Synth 8-6155] done synthesizing module 'translate' (0#1) [C:/Users/Administrator/Desktop/project_2/project_2.srcs/sources_1/new/translate.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'min' [C:/Users/Administrator/Desktop/project_2/project_2.srcs/sources_1/new/min.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'min' (0#1) [C:/Users/Administrator/Desktop/project_2/project_2.srcs/sources_1/new/min.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'translate__parameterized0' [C:/Users/Administrator/Desktop/project_2/project_2.srcs/sources_1/new/translate.sv:23]
+	Parameter N bound to: 32'sb00000000000000000000000000001000 
+	Parameter STEPS bound to: 32'sb00000000000000000000000000000001 
+INFO: [Synth 8-6155] done synthesizing module 'translate__parameterized0' (0#1) [C:/Users/Administrator/Desktop/project_2/project_2.srcs/sources_1/new/translate.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'translate__parameterized1' [C:/Users/Administrator/Desktop/project_2/project_2.srcs/sources_1/new/translate.sv:23]
+	Parameter N bound to: 32'sb00000000000000000000000000001000 
+	Parameter STEPS bound to: 32'sb00000000000000000000000000000010 
+INFO: [Synth 8-6155] done synthesizing module 'translate__parameterized1' (0#1) [C:/Users/Administrator/Desktop/project_2/project_2.srcs/sources_1/new/translate.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'translate__parameterized2' [C:/Users/Administrator/Desktop/project_2/project_2.srcs/sources_1/new/translate.sv:23]
+	Parameter N bound to: 32'sb00000000000000000000000000001000 
+	Parameter STEPS bound to: 32'sb00000000000000000000000000000011 
+INFO: [Synth 8-6155] done synthesizing module 'translate__parameterized2' (0#1) [C:/Users/Administrator/Desktop/project_2/project_2.srcs/sources_1/new/translate.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'translate__parameterized3' [C:/Users/Administrator/Desktop/project_2/project_2.srcs/sources_1/new/translate.sv:23]
+	Parameter N bound to: 32'sb00000000000000000000000000001000 
+	Parameter STEPS bound to: 32'sb00000000000000000000000000000100 
+INFO: [Synth 8-6155] done synthesizing module 'translate__parameterized3' (0#1) [C:/Users/Administrator/Desktop/project_2/project_2.srcs/sources_1/new/translate.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'translate__parameterized4' [C:/Users/Administrator/Desktop/project_2/project_2.srcs/sources_1/new/translate.sv:23]
+	Parameter N bound to: 32'sb00000000000000000000000000001000 
+	Parameter STEPS bound to: 32'sb00000000000000000000000000000101 
+INFO: [Synth 8-6155] done synthesizing module 'translate__parameterized4' (0#1) [C:/Users/Administrator/Desktop/project_2/project_2.srcs/sources_1/new/translate.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'translate__parameterized5' [C:/Users/Administrator/Desktop/project_2/project_2.srcs/sources_1/new/translate.sv:23]
+	Parameter N bound to: 32'sb00000000000000000000000000001000 
+	Parameter STEPS bound to: 32'sb00000000000000000000000000000110 
+INFO: [Synth 8-6155] done synthesizing module 'translate__parameterized5' (0#1) [C:/Users/Administrator/Desktop/project_2/project_2.srcs/sources_1/new/translate.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'translate__parameterized6' [C:/Users/Administrator/Desktop/project_2/project_2.srcs/sources_1/new/translate.sv:23]
+	Parameter N bound to: 32'sb00000000000000000000000000001000 
+	Parameter STEPS bound to: 32'sb00000000000000000000000000000111 
+INFO: [Synth 8-6155] done synthesizing module 'translate__parameterized6' (0#1) [C:/Users/Administrator/Desktop/project_2/project_2.srcs/sources_1/new/translate.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'min_cfg' (0#1) [C:/Users/Administrator/Desktop/project_2/project_2.srcs/sources_1/new/min_cfg.sv:23]
+WARNING: [Synth 8-3848] Net out in module/entity min_cfg does not have driver. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/sources_1/new/min_cfg.sv:26]
+WARNING: [Synth 8-7129] Port out[7] in module min_cfg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port out[6] in module min_cfg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port out[5] in module min_cfg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port out[4] in module min_cfg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port out[3] in module min_cfg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port out[2] in module min_cfg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port out[1] in module min_cfg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port out[0] in module min_cfg is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1303.855 ; gain = 602.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1303.855 ; gain = 602.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1303.855 ; gain = 602.016
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1303.855 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'CLK100MHZ'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:7]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:7]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CLK100MHZ'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:8]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports CLK100MHZ]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:8]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'SW[0]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[1]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[2]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[3]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[4]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[5]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[6]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[7]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[0]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[1]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[2]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[3]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[4]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[5]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[6]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[7]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:60]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:60]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:61]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:61]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:62]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:62]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:63]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:64]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:64]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:65]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:65]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dp'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:68]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[0]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[1]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:71]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[2]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:72]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[3]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[4]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:74]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:74]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[5]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[6]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[7]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:77]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:77]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxn3'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:144]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:144]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxp3'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:145]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:145]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxn10'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:146]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:146]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxp10'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:147]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:147]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxn2'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:148]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:148]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxp2'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:149]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:149]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxn11'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:150]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:150]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxp11'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:151]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:151]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1376.973 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1376.973 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1376.973 ; gain = 675.133
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1376.973 ; gain = 675.133
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1376.973 ; gain = 675.133
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1376.973 ; gain = 675.133
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input    8 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3330] design min_cfg has an empty top module
+WARNING: [Synth 8-7129] Port out[7] in module min_cfg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port out[6] in module min_cfg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port out[5] in module min_cfg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port out[4] in module min_cfg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port out[3] in module min_cfg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port out[2] in module min_cfg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port out[1] in module min_cfg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port out[0] in module min_cfg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[7] in module min_cfg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[6] in module min_cfg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[5] in module min_cfg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[4] in module min_cfg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[3] in module min_cfg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[2] in module min_cfg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[1] in module min_cfg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[0] in module min_cfg is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1376.973 ; gain = 675.133
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1502.633 ; gain = 800.793
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1502.633 ; gain = 800.793
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1512.184 ; gain = 810.344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1747.227 ; gain = 1045.387
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1747.227 ; gain = 1045.387
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1747.227 ; gain = 1045.387
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1747.227 ; gain = 1045.387
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1747.227 ; gain = 1045.387
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1747.227 ; gain = 1045.387
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |OBUFT |     8|
++------+------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1747.227 ; gain = 1045.387
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 18 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:37 . Memory (MB): peak = 1747.227 ; gain = 972.270
+Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1747.227 ; gain = 1045.387
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1747.227 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1747.227 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: f1d4750a
+INFO: [Common 17-83] Releasing license: Synthesis
+38 Infos, 69 Warnings, 42 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:46 . Memory (MB): peak = 1747.227 ; gain = 1243.973
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1747.227 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Administrator/Desktop/project_2/project_2.runs/synth_1/min_cfg.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file min_cfg_utilization_synth.rpt -pb min_cfg_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Aug 13 17:34:15 2025...

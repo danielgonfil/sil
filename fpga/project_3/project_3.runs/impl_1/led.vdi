@@ -1,0 +1,151 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Thu Aug 14 14:46:24 2025
+# Process ID         : 12944
+# Current directory  : C:/Users/Administrator/Desktop/project_3/project_3.runs/impl_1
+# Command line       : vivado.exe -log led.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source led.tcl -notrace
+# Log file           : C:/Users/Administrator/Desktop/project_3/project_3.runs/impl_1/led.vdi
+# Journal file       : C:/Users/Administrator/Desktop/project_3/project_3.runs/impl_1\vivado.jou
+# Running On         : c019243
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : Intel(R) Core(TM) i5-7300U CPU @ 2.60GHz
+# CPU Frequency      : 2712 MHz
+# CPU Physical cores : 2
+# CPU Logical cores  : 4
+# Host memory        : 8416 MB
+# Swap memory        : 3623 MB
+# Total Virtual      : 12040 MB
+# Available Virtual  : 3541 MB
+#-----------------------------------------------------------
+source led.tcl -notrace
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 495.023 ; gain = 214.098
+Command: link_design -top led -part xc7a100tcsg324-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 704.543 ; gain = 0.000
+INFO: [Project 1-479] Netlist was created with Vivado 2025.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'CLK100MHZ'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:7]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:7]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CLK100MHZ'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:8]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports CLK100MHZ]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:8]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:60]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:60]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:61]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:61]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:62]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:62]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:63]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:64]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:64]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:65]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:65]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dp'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:68]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[0]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[1]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:71]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[2]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:72]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[3]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[4]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:74]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:74]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[5]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[6]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[7]'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:77]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:77]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxn3'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:144]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:144]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxp3'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:145]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:145]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxn10'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:146]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:146]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxp10'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:147]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:147]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxn2'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:148]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:148]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxp2'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:149]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:149]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxn11'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:150]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:150]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vauxp11'. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:151]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc:151]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/Administrator/Desktop/project_2/project_2.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 833.375 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+5 Infos, 26 Warnings, 26 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 838.352 ; gain = 343.328
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net LED_OBUF[0] has multiple drivers: LED_OBUF[0]_inst_i_1/O, LED_OBUF[0]_inst_i_3/O, and LED_OBUF[0]_inst_i_2/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net LED_OBUF[1] has multiple drivers: LED_OBUF[1]_inst_i_3/O, LED_OBUF[1]_inst_i_2/O, and LED_OBUF[1]_inst_i_1/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net LED_OBUF[2] has multiple drivers: LED_OBUF[2]_inst_i_1/O, LED_OBUF[2]_inst_i_3/O, and LED_OBUF[2]_inst_i_2/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net LED_OBUF[3] has multiple drivers: LED_OBUF[3]_inst_i_3/O, LED_OBUF[3]_inst_i_2/O, and LED_OBUF[3]_inst_i_1/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net l_OBUF[0] has multiple drivers: l_OBUF[0]_inst_i_2/O, l_OBUF[0]_inst_i_1/O, and l_OBUF[0]_inst_i_3/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net l_OBUF[2] has multiple drivers: l_OBUF[2]_inst_i_3/O, l_OBUF[2]_inst_i_1/O, and l_OBUF[2]_inst_i_2/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net u_symmetrization/gen_translate_and_min_l[1].u_min_l_gen[0]/UNCONN_OUT has multiple drivers: u_symmetrization/gen_translate_and_min_l[1].u_min_l_gen[0]/out1__2/O, and u_symmetrization/gen_translate_and_min_l[1].u_min_l_gen[0]/out1__1/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net u_symmetrization/gen_translate_and_min_l[1].u_min_l_gen[0]/ls[2]_1[0] has multiple drivers: u_symmetrization/gen_translate_and_min_l[1].u_min_l_gen[0]/out1/O, and u_symmetrization/gen_translate_and_min_l[1].u_min_l_gen[0]/out1__0/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net u_symmetrization/gen_translate_and_min_l[2].u_min_l_gen[0]/UNCONN_OUT has multiple drivers: u_symmetrization/gen_translate_and_min_l[2].u_min_l_gen[0]/out1__0/O, and u_symmetrization/gen_translate_and_min_l[2].u_min_l_gen[0]/out1/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net u_symmetrization/gen_translate_and_min_l[2].u_min_l_gen[0]/l_OBUF[0] has multiple drivers: u_symmetrization/gen_translate_and_min_l[2].u_min_l_gen[0]/out1__7/O, u_symmetrization/gen_translate_and_min_l[2].u_min_l_gen[0]/out1__8/O, and u_symmetrization/gen_translate_and_min_l[2].u_min_l_gen[0]/out1__9/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net u_symmetrization/gen_translate_and_min_l[2].u_min_l_gen[0]/mins[2]_0[0] has multiple drivers: u_symmetrization/gen_translate_and_min_l[2].u_min_l_gen[0]/out1__5/O, and u_symmetrization/gen_translate_and_min_l[2].u_min_l_gen[0]/out1__6/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net u_symmetrization/gen_translate_and_min_l[2].u_min_l_gen[0]/mins[2]_0[1] has multiple drivers: u_symmetrization/gen_translate_and_min_l[2].u_min_l_gen[0]/out1__3/O, and u_symmetrization/gen_translate_and_min_l[2].u_min_l_gen[0]/out1__4/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net u_symmetrization/gen_translate_and_min_l[2].u_min_l_gen[0]/mins[2]_0[2] has multiple drivers: u_symmetrization/gen_translate_and_min_l[2].u_min_l_gen[0]/out1__2/O, and u_symmetrization/gen_translate_and_min_l[2].u_min_l_gen[0]/out1__1/O.
+INFO: [Project 1-461] DRC finished with 13 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado_Tcl 4-78] Error(s) found during DRC. Opt_design not run.
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 873.766 ; gain = 35.414
+INFO: [Common 17-83] Releasing license: Implementation
+10 Infos, 26 Warnings, 26 Critical Warnings and 14 Errors encountered.
+opt_design failed
+ERROR: [Common 17-39] 'opt_design' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Thu Aug 14 14:46:42 2025...
